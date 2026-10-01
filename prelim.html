@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prelim Activities | Ana Liza</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================
+           PRELIM ACTIVITIES PAGE
+        ========================= */
+
+        .prelim-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 110px 25px 60px;
+        }
+
+        .prelim-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .prelim-header .eyebrow {
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .prelim-header h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 15px;
+        }
+
+        .prelim-header p {
+            color: var(--muted);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .prelim-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .prelim-card {
+            overflow: hidden;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(12px);
+            transition: 0.3s ease;
+        }
+
+        .prelim-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 55px rgba(118, 87, 232, 0.18);
+        }
+
+        .prelim-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .prelim-info {
+            padding: 25px;
+        }
+
+        .activity-label {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 50px;
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--accent)
+            );
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .prelim-info h2 {
+            margin-bottom: 8px;
+        }
+
+        .prelim-info p {
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .back-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .back-button a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 50px;
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--accent)
+            );
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .back-button a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(118, 87, 232, 0.25);
+        }
+
+        @media (max-width: 700px) {
+            .prelim-page {
+                padding: 90px 18px 40px;
+            }
+
+            .prelim-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .prelim-card img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<!-- IMAGE VIEWER -->
+<div class="image-viewer" id="imageViewer" onclick="closeImage()">
+
+    <span class="close-viewer">&times;</span>
+
+    <img id="fullImage" src="" alt="Full Activity">
+
+</div>
+
+
+<script>
+    function openImage(imageSrc) {
+        document.getElementById("imageViewer").style.display = "flex";
+        document.getElementById("fullImage").src = imageSrc;
+    }
+
+    function closeImage() {
+        document.getElementById("imageViewer").style.display = "none";
+    }
+</script>
+
+<body>
+
+    <!-- PRELIM PAGE -->
+
+    <main class="prelim-page">
+
+        <!-- HEADER -->
+        <header class="prelim-header">
+
+            <p class="eyebrow">ITE 1 • ACADEMIC PORTFOLIO</p>
+
+            <h1>My Prelim Activities</h1>
+
+            <p>
+                Here are my activities and outputs during the Prelim period.
+            </p>
+
+        </header>
+
+
+        <!-- ACTIVITIES -->
+        <section class="prelim-grid">
+
+
+            <!-- ACTIVITY 1 -->
+            <article class="prelim-card">
+
+                <img
+                    src="45f6cb65-e78b-4415-b5e2-587b4c9fe857.jpg"
+                    alt="Prelim Activity 1"
+                    onclick="openImage(this.src)">
+
+                <div class="prelim-info">
+
+                    <span class="activity-label">
+                        ACTIVITY 01
+                    </span>
+
+                    <h2>Prelim Activity 1</h2>
+
+                    <p>
+                        This is my first activity and output during the Prelim period.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ACTIVITY 2 -->
+            <article class="prelim-card">
+
+                <img
+                    src="4ce93785-af43-4d46-ae6f-ad3f919fd414.jpg"
+                    alt="Prelim Activity 2"
+                    onclick="openImage(this.src)">
+                >
+
+                <div class="prelim-info">
+
+                    <span class="activity-label">
+                        ACTIVITY 02
+                    </span>
+
+                    <h2>Prelim Activity 2</h2>
+
+                    <p>
+                        This is my second activity and output during the Prelim period.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- BACK BUTTON -->
+        <div class="back-button">
+
+            <a href="04-projects.html">
+                ← Back to Activities
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- IMAGE VIEWER -->
+<div class="image-viewer" id="imageViewer" onclick="closeImage()">
+
+    <span class="close-viewer">&times;</span>
+
+    <img id="fullImage" src="" alt="Full Activity">
+
+</div>
+
+
+<script>
+    function openImage(imageSrc) {
+        document.getElementById("imageViewer").style.display = "flex";
+        document.getElementById("fullImage").src = imageSrc;
+    }
+
+    function closeImage() {
+        document.getElementById("imageViewer").style.display = "none";
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Midterm Activity | Ana Liza</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .midterm-page {
+            max-width: 1100px;
+            margin: auto;
+            padding: 110px 25px 60px;
+        }
+
+        .midterm-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .midterm-header h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin: 10px 0;
+        }
+
+        .midterm-header p {
+            color: var(--muted);
+        }
+
+        /* 3 SEPARATE BOXES */
+
+        .midterm-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .midterm-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.3s ease;
+        }
+
+        .midterm-box:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 20px 45px rgba(118, 87, 232, 0.20);
+        }
+
+        /* PICTURE */
+
+        .midterm-box img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            cursor: zoom-in;
+            transition: 0.3s ease;
+        }
+
+        .midterm-box img:hover {
+            transform: scale(1.03);
+        }
+
+        /* BOX TEXT */
+
+        .midterm-info {
+            padding: 20px;
+        }
+
+        .activity-number {
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .midterm-info h2 {
+            margin: 7px 0 0;
+            font-size: 20px;
+        }
+
+        /* BACK BUTTON */
+
+        .back-button {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-button a {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 50px;
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--accent)
+            );
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* FULL IMAGE POPUP */
+
+        .image-viewer {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+
+            background: rgba(15, 10, 30, 0.90);
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 25px;
+        }
+
+        .image-viewer img {
+            max-width: 95%;
+            max-height: 90vh;
+
+            width: auto;
+            height: auto;
+
+            object-fit: contain;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* CLOSE BUTTON */
+
+        .close-viewer {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+
+            color: white;
+            font-size: 50px;
+            font-weight: 300;
+
+            cursor: pointer;
+        }
+
+        .close-viewer:hover {
+            transform: scale(1.1);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .midterm-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .midterm-box img {
+                height: 300px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <main class="midterm-page">
+
+        <!-- HEADER -->
+
+        <header class="midterm-header">
+
+            <p class="eyebrow">
+                ITE 1 • ACADEMIC PORTFOLIO
+            </p>
+
+            <h1>My Midterm Activity</h1>
+
+            <p>
+                My activity output for the Midterm period.
+            </p>
+
+        </header>
+
+
+        <!-- 3 SEPARATE BOXES -->
+
+        <section class="midterm-grid">
+
+
+            <!-- BOX 1 -->
+
+            <article class="midterm-box">
+
+                <img
+                    src="a8ad8c0f-f201-48ae-8afa-55452ee22249.jpg"
+                    alt="Midterm Activity Picture 1"
+                    onclick="openImage(this.src)"
+                >
+
+                <div class="midterm-info">
+
+                    <span class="activity-number">
+                        ACTIVITY 01
+                    </span>
+
+                    <h2>Midterm Output</h2>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BOX 2 -->
+
+            <article class="midterm-box">
+
+                <img
+                    src="227effad-f378-4df0-809c-5b4873a1a182.jpg"
+                    alt="Midterm Activity Picture 2"
+                    onclick="openImage(this.src)"
+                >
+
+                <div class="midterm-info">
+
+                    <span class="activity-number">
+                        ACTIVITY 01
+                    </span>
+
+                    <h2>Midterm Output</h2>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BOX 3 -->
+
+            <article class="midterm-box">
+
+                <img
+                    src="dddf50a3-6dd8-4476-aad1-e2fe1f6127e0 (1).jpg"
+                    alt="Midterm Activity Picture 3"
+                    onclick="openImage(this.src)"
+                >
+
+                <div class="midterm-info">
+
+                    <span class="activity-number">
+                        ACTIVITY 01
+                    </span>
+
+                    <h2>Midterm Output</h2>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- BACK -->
+
+        <div class="back-button">
+
+            <a href="04-projects.html">
+                ← Back to Activities
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FULL IMAGE VIEWER -->
+
+    <div
+        class="image-viewer"
+        id="imageViewer"
+        onclick="closeImage()"
+    >
+
+        <span
+            class="close-viewer"
+            onclick="event.stopPropagation(); closeImage()"
+        >
+            &times;
+        </span>
+
+        <img
+            id="fullImage"
+            src=""
+            alt="Full Midterm Picture"
+            onclick="event.stopPropagation()"
+        >
+
+    </div>
+
+
+
+    <script>
+
+        function openImage(imageSrc) {
+
+            document.getElementById("fullImage").src = imageSrc;
+
+            document.getElementById("imageViewer").style.display = "flex";
+
+        }
+
+
+        function closeImage() {
+
+            document.getElementById("imageViewer").style.display = "none";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

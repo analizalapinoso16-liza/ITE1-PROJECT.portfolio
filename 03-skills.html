@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Ana Liza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+    <nav class="navbar container">
+        <a class="logo" href="01-index.html">A<span>L</span>.</a>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+        <div class="nav-links">
+            <a href="01-index.html">Home</a>
+            <a href="02-about.html">About Me</a>
+            <a class="active" href="03-skills.html">Skills</a>
+            <a href="04-projects.html">Projects</a>
+            <a href="05-contact.html">Contact</a>
+            <button id="themeToggle" class="theme-btn" title="Toggle dark/light mode">☾</button>
+        </div>
+    </nav>
+</header>
+
+<main class="page-main">
+    <section class="page-heading container">
+        <p class="eyebrow">WHAT I CAN DO</p>
+        <h1>My Skills</h1>
+        <p>Technical and personal skills that I am developing as an IT student.</p>
+    </section>
+
+    <section class="container skills-layout">
+        <article class="glass-card">
+            <h2>Technical Skills</h2>
+            <div class="skill">
+                <div><span>HTML:</span><b>80%</b></div><div class="progress"><i style="width:80%"></i></div>
+            </div>
+            <div class="skill">
+                <div><span>CSS:</span><b>75%</b></div><div class="progress"><i style="width:75%"></i></div>
+            </div>
+            <div class="skill">
+                <div><span>JavaScript:</span><b>60%</b></div><div class="progress"><i style="width:55%"></i></div>
+            </div>
+            <div class="skill">
+                <div><span>VS Code:</span><b>70%</b></div><div class="progress"><i style="width:75%"></i></div>
+            </div>
+            <div class="skill">
+                <div><span>Git & GitHub:</span><b> 50%</b></div><div class="progress"><i style="width:50%"></i></div>
+            </div>
+        </article>
+
+        <article class="glass-card">
+            <h2>Personal Skills</h2>
+            <div class="chip-list">
+                <span>Communication</span><span>Teamwork</span><span>Time Management</span>
+                <span>Creativity</span><span>Adaptability</span><span>Problem Solving</span>
+                <span>Willingness to Learn</span><span>Organization</span>
+            </div>
+            <button class="btn primary full-btn" id="skillsBtn">Show my learning goal</button>
+            <p id="skillMessage" class="hidden-message">My goal is to become more confident in coding and build useful, responsive websites.</p>
+        </article>
+    </section>
+
+    <section class="container learning-banner">
+        <div>
+            <p class="eyebrow">CURRENTLY LEARNING</p>
+            <h2>Build •Test •Improve •Repeat</h2>
+            <p>I am practicing how HTML, CSS, and JavaScript work together to create interactive websites.</p>
+        </div>
+        <div class="code-symbol">&lt;/&gt;</div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <p>© <span id="year"></span> Ana Liza Lapinoso. ITE 1 Portfolio.</p>
+        <p>Made with HTML • CSS • JavaScript</p>
+    </div>
+</footer>
+<button id="backTop" class="back-top" aria-label="Back to top">↑</button>
+<script src="07-script.js"></script>
+</body>
+</html>

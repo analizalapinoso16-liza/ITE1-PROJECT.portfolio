@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finals Activities | Ana Liza</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .finals-page {
+            max-width: 1100px;
+            margin: auto;
+            padding: 110px 25px 60px;
+        }
+
+        .finals-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .finals-header h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin: 10px 0;
+        }
+
+        .finals-header p {
+            color: var(--muted);
+        }
+
+        /* ACTIVITY SECTION */
+
+        .activity-section {
+            margin-bottom: 50px;
+        }
+
+        .activity-title {
+            margin-bottom: 20px;
+        }
+
+        .activity-title span {
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .activity-title h2 {
+            margin: 5px 0;
+        }
+
+        /* PICTURE BOXES */
+
+        .finals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .finals-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.3s ease;
+        }
+
+        .finals-box:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 20px 45px rgba(118, 87, 232, 0.20);
+        }
+
+        /* PICTURE */
+
+        .finals-box img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            cursor: zoom-in;
+            transition: 0.3s ease;
+        }
+
+        .finals-box img:hover {
+            transform: scale(1.03);
+        }
+
+        /* BOX INFO */
+
+        .finals-info {
+            padding: 20px;
+        }
+
+        .picture-number {
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .finals-info h3 {
+            margin: 7px 0 0;
+        }
+
+        /* BACK BUTTON */
+
+        .back-button {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-button a {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 50px;
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--accent)
+            );
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* FULL IMAGE VIEWER */
+
+        .image-viewer {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+
+            background: rgba(15, 10, 30, 0.90);
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 25px;
+        }
+
+        .image-viewer img {
+            max-width: 95%;
+            max-height: 90vh;
+
+            width: auto;
+            height: auto;
+
+            object-fit: contain;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* CLOSE BUTTON */
+
+        .close-viewer {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+
+            color: white;
+            font-size: 50px;
+            font-weight: 300;
+
+            cursor: pointer;
+        }
+
+        .close-viewer:hover {
+            transform: scale(1.1);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .finals-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .finals-box img {
+                height: 300px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <main class="finals-page">
+
+        <!-- HEADER -->
+
+        <header class="finals-header">
+
+            <p class="eyebrow">
+                ITE 1 • ACADEMIC PORTFOLIO
+            </p>
+
+            <h1>My Finals Activities</h1>
+
+            <p>
+                My activities and outputs completed during the Finals period.
+            </p>
+
+        </header>
+
+
+        <!-- ========================= -->
+        <!-- ACTIVITY 1 -->
+        <!-- ========================= -->
+
+        <section class="activity-section">
+
+            <div class="activity-title">
+
+                <span>ACTIVITY 01</span>
+
+                <h2>Finals Activity 1</h2>
+
+            </div>
+
+
+            <div class="finals-grid">
+
+
+                <!-- PICTURE 1 -->
+
+                <article class="finals-box">
+
+                    <img
+                        src="47a252cb-76e0-4b01-8601-ddb15e80d723.jpg"
+                        alt="Finals Activity 1 Picture 1"
+                        onclick="openImage(this.src)"
+                    >
+
+                    <div class="finals-info">
+
+                        <span class="picture-number">
+                            PICTURE 01
+                        </span>
+
+                        <h3>Finals Output</h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PICTURE 2 -->
+
+                <article class="finals-box">
+
+                    <img
+                        src="5a3c87e3-d82b-483b-afdf-0b30723fc9ea.jpg"
+                        alt="Finals Activity 1 Picture 2"
+                        onclick="openImage(this.src)"
+                    >
+
+                    <div class="finals-info">
+
+                        <span class="picture-number">
+                            PICTURE 02
+                        </span>
+
+                        <h3>Finals Output</h3>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- ACTIVITY 2 -->
+        <!-- ========================= -->
+
+        <section class="activity-section">
+
+            <div class="activity-title">
+
+                <span>ACTIVITY 02</span>
+
+                <h2>Finals Activity 2</h2>
+
+            </div>
+
+
+            <div class="finals-grid">
+
+
+                <!-- PICTURE 1 -->
+
+                <article class="finals-box">
+
+                    <img
+                        src="ite 3.png"
+                        alt="Finals Activity 2 Picture 1"
+                        onclick="openImage(this.src)"
+                    >
+
+                    <div class="finals-info">
+
+                        <span class="picture-number">
+                            PICTURE 01
+                        </span>
+
+                        <h3>Finals Output</h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PICTURE 2 -->
+
+                <article class="finals-box">
+
+                    <img
+                        src="ite33.png"
+                        alt="Finals Activity 2 Picture 2"
+                        onclick="openImage(this.src)"
+                    >
+
+                    <div class="finals-info">
+
+                        <span class="picture-number">
+                            PICTURE 02
+                        </span>
+
+                        <h3>Finals Output</h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PICTURE 3 -->
+
+                <article class="finals-box">
+
+                    <img
+                        src="ite123.png"
+                        alt="Finals Activity 2 Picture 3"
+                        onclick="openImage(this.src)"
+                    >
+
+                    <div class="finals-info">
+
+                        <span class="picture-number">
+                            PICTURE 03
+                        </span>
+
+                        <h3>Finals Output</h3>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BACK BUTTON -->
+
+        <div class="back-button">
+
+            <a href="04-projects.html">
+                ← Back to Activities
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FULL IMAGE VIEWER -->
+
+    <div
+        class="image-viewer"
+        id="imageViewer"
+        onclick="closeImage()"
+    >
+
+        <span
+            class="close-viewer"
+            onclick="event.stopPropagation(); closeImage()"
+        >
+            &times;
+        </span>
+
+        <img
+            id="fullImage"
+            src=""
+            alt="Full Finals Picture"
+            onclick="event.stopPropagation()"
+        >
+
+    </div>
+
+
+
+    <script>
+
+        function openImage(imageSrc) {
+
+            document.getElementById("fullImage").src = imageSrc;
+
+            document.getElementById("imageViewer").style.display = "flex";
+
+        }
+
+
+        function closeImage() {
+
+            document.getElementById("imageViewer").style.display = "none";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
