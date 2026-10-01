@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ana Liza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+    <nav class="navbar container">
+        <a class="logo" href="01-index.html">A<span>L</span>.</a>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+        <div class="nav-links">
+            <a href="01-index.html">Home</a>
+            <a href="02-about.html">About Me</a>
+            <a href="03-skills.html">Skills</a>
+            <a href="04-projects.html">Projects</a>
+            <a class="active" href="05-contact.html">Contact</a>
+            <button id="themeToggle" class="theme-btn" title="Toggle dark/light mode">☾</button>
+        </div>
+    </nav>
+</header>
+
+<main class="page-main">
+    <section class="page-heading container">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h1>Contact Me</h1>
+        <p>For school-related concerns, collaboration, or portfolio inquiries.</p>
+    </section>
+
+    <section class="container contact-grid">
+        <div class="contact-info">
+            <div class="contact-item"><span>✉</span><div><small>Email: </small><strong>analizalapinoso16@gmail.com</strong></div></div>
+            <div class="contact-item"><span>☎</span><div><small>Phone: </small><strong>09074476723</strong></div></div>
+            <div class="contact-item"><span>📍</span><div><small>Location: </small><strong> Bagong Silang Caloocan City Manila, Philippines</strong></div></div>
+            <div class="contact-item"><span>💻</span><div><small>GitHub: </small><strong>github.com/analizalapinoso</strong></div></div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+            <h2>Send a Message</h2>
+            <label for="name:">Name</label>
+            <input id="name:" type="text" placeholder="Your name" required>
+            <label for="email:">Email</label>
+            <input id="email:" type="email" placeholder="you@example.com" required>
+            <label for="message:">Message</label>
+            <textarea id="message:" rows="5" placeholder="Write your message..." required></textarea>
+            <button class="btn primary" type="submit">Send Message</button>
+        
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <p>© <span id="year"></span> Ana Liza L. Lapinoso. ITE 1 Portfolio.</p>
+        <p>Made with HTML • CSS • JavaScript</p>
+    </div>
+</footer>
+<button id="backTop" class="back-top" aria-label="Back to top">↑</button>
+<script src="07-script.js"></script>
+</body>
+</html>
